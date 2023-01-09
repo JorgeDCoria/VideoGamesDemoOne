@@ -24,12 +24,73 @@ import {
   RiLinkedinFill,
 } from "react-icons/ri";
 import { useState } from "react";
+import CardSmall from "./components/CardSmall";
+import Card from "./components/Card";
 
 function App() {
   const togleMenu = () => {
     setShowMenu(!showMenu);
   };
   const [showMenu, setShowMenu] = useState(false);
+
+  const dataMiniCard = [
+    {
+      title: "Fornite",
+      url: "https://m.media-amazon.com/images/M/MV5BNzU2YTY2OTgtZGZjZi00MTAyLThlYjUtMWM5ZmYzOGEyOWJhXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+    },
+    {
+      title: "teken tag",
+      url: "https://media.vandal.net/m/61/tekken-tag-tournament-2016105185942_1.jpg",
+    },
+    {
+      title: "Free Fire",
+      url: "https://img.redbull.com/images/c_crop,x_355,y_0,h_675,w_506/c_fill,w_400,h_540/q_auto:low,f_auto/redbullcom/2022/8/1/rsbzzfowbenf2kpnbpgj/free-fire",
+    },
+    {
+      title: "clash of Clans",
+      url: "https://static-cdn.jtvnw.net/ttv-boxart/73914_IGDB-272x380.jpg",
+    },
+    { title: "Dota 2", url: "https://howlongtobeat.com/games/250px-DotA2.jpg" },
+  ];
+
+  const dataCard = [
+    {
+      title: "Valhein",
+      url: "https://as01.epimg.net/meristation/imagenes/2021/01/26/cover/956560151611687466.jpg",
+      price: 1250,
+      type: "Action games",
+      discount: null,
+    },
+    {
+      title: "Bioshock",
+      url: "https://upload.wikimedia.org/wikipedia/en/6/6d/BioShock_cover.jpg",
+      price: 8.15,
+      type: "Action, RPG",
+      discount: "-80%",
+    },
+    {
+      title: "Unravel",
+      url: "https://media.contentapi.ea.com/content/dam/eacom/unravel/ea-hero-large-unravel-xl.jpg.adapt.crop3x5.320w.jpg",
+      price: 20.38,
+      type: "Adventure games",
+      discount: null,
+    },
+    {
+      title: "Mortal Kombat",
+      url: "https://images.justwatch.com/poster/261338572/s718/mortal-kombat-2021.%7Bformat%7D",
+      price: 120,
+      type: "Action, Figth",
+      discount: "-80%",
+    },
+    {
+      title: "Call of Duty",
+      url: "https://image.api.playstation.com/cdn/UP0002/CUSA04762_00/LHc8qTz6JmLL46EdNWYEvqZEsIEYCbhy.png",
+      price: 250,
+      type: "Action Fire",
+      discount: null,
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#141414]">
       <Routes>
@@ -113,6 +174,7 @@ function App() {
                 className="relative flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
               >
                 <img
+                  alt="image"
                   className="h-6 w-6 rounded-full object-cover"
                   src="https://img.freepik.com/foto-gratis/primer-disparo-hombre-guapo-sonriendo_181624-41237.jpg?w=740&t=st=1671074933~exp=1671075533~hmac=cb6c6b35570a0d68c65aa7e9aee82b0e4dd6484ff70df5961ab0f3d8b1b0d256"
                 />
@@ -181,6 +243,7 @@ function App() {
             <img
               src="https://static-assets-prod.epicgames.com/competitive/static/webpack/1d89ee10c18f54afa33cf8063c27d7d4.jpg"
               className="h-96 w-full rounded-tl-xl rounded-bl-xl object-cover"
+              alt="image content"
             />
             <h1 className="absolute left-4 top-4 text-3xl font-bold text-white">
               Fornite
@@ -198,51 +261,11 @@ function App() {
           </div>
           <div className="  bg-[#232323] lg:col-span-3 lg:h-96 lg:rounded-tr-xl lg:rounded-br-xl ">
             <ul className="flex flex-row  justify-center gap-5  p-3 md:h-full lg:flex-col lg:overflow-y-auto ">
-              <li>
-                <Link className="flex flex-col items-center gap-4 text-lg text-white lg:flex-row">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BNzU2YTY2OTgtZGZjZi00MTAyLThlYjUtMWM5ZmYzOGEyOWJhXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg"
-                    className="h-16 w-14 object-cover"
-                  />
-                  Fornite
-                </Link>
-              </li>
-              <li>
-                <Link className="flex flex-col items-center gap-4 text-lg text-white lg:flex-row">
-                  <img
-                    src="https://media.vandal.net/m/61/tekken-tag-tournament-2016105185942_1.jpg"
-                    className="h-16 w-14 object-cover"
-                  />
-                  Teken Tag
-                </Link>
-              </li>
-              <li>
-                <Link className="flex flex-col items-center gap-4 text-lg text-white lg:flex-row">
-                  <img
-                    src="https://img.redbull.com/images/c_crop,x_355,y_0,h_675,w_506/c_fill,w_400,h_540/q_auto:low,f_auto/redbullcom/2022/8/1/rsbzzfowbenf2kpnbpgj/free-fire"
-                    className="h-16 w-14 object-cover"
-                  />
-                  Free Fire
-                </Link>
-              </li>
-              <li>
-                <Link className="flex flex-col items-center gap-4 text-lg text-white lg:flex-row">
-                  <img
-                    src="https://static-cdn.jtvnw.net/ttv-boxart/73914_IGDB-272x380.jpg"
-                    className="h-16 w-14  object-cover"
-                  />
-                  Clash of
-                </Link>
-              </li>
-              <li>
-                <Link className="flex flex-col items-center gap-4 text-lg text-white lg:flex-row">
-                  <img
-                    src="https://howlongtobeat.com/games/250px-DotA2.jpg"
-                    className="h-16 w-14  object-cover"
-                  />
-                  Dota 2
-                </Link>
-              </li>
+              {dataMiniCard.map((game, index) => (
+                <li key={index}>
+                  <CardSmall title={game.title} url={game.url} />
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -255,63 +278,15 @@ function App() {
           </div>
         </div>
         <div className="grid gap-2  p-2 lg:grid-cols-5">
-          <div>
-            <img
-              src="https://as01.epimg.net/meristation/imagenes/2021/01/26/cover/956560151611687466.jpg"
-              className=" h-56 w-full rounded-xl object-cover"
+          {dataCard.map((game, index) => (
+            <Card
+              key={index}
+              title={game.title}
+              url={game.url}
+              price={game.price}
+              discount={game.discount}
             />
-            <h3 className="text-lg text-gray-300">Valhein</h3>
-            <p className="mb-2 text-gray-500">Action games</p>
-            <span className="flex justify-center  text-white">$1250</span>
-          </div>
-          <div>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/6/6d/BioShock_cover.jpg"
-              className=" h-56 w-full rounded-xl object-cover"
-            />
-            <h3 className="text-lg text-gray-300">Bioshock</h3>
-            <p className="mb-2 text-gray-500">Action, RPG</p>
-            <div className="flex items-center justify-center gap-2">
-              <span className="rounded-lg bg-green-300 p-1 font-semibold text-gray-700">
-                -80%
-              </span>
-              <span className="text-gray-500">$50</span>
-              <span className="flex justify-center  text-white">$8.15</span>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://media.contentapi.ea.com/content/dam/eacom/unravel/ea-hero-large-unravel-xl.jpg.adapt.crop3x5.320w.jpg"
-              className=" h-56 w-full rounded-xl object-cover"
-            />
-            <h3 className="text-lg text-gray-300">Unravel</h3>
-            <p className="mb-2 text-gray-500">Adventure games</p>
-            <span className="flex justify-center  text-white">$20.38</span>
-          </div>
-          <div>
-            <img
-              src="https://images.justwatch.com/poster/261338572/s718/mortal-kombat-2021.%7Bformat%7D"
-              className=" h-56 w-full rounded-xl object-cover"
-            />
-            <h3 className="text-lg text-gray-300">Mortal Kombat</h3>
-            <p className="mb-2 text-gray-500">Action, Figth</p>
-            <div className="flex items-center justify-center gap-2">
-              <span className="rounded-lg bg-green-300 p-1 font-semibold text-gray-700">
-                -80%
-              </span>
-              <span className="text-gray-500">$50</span>
-              <span className="flex justify-center  text-white">$120</span>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://image.api.playstation.com/cdn/UP0002/CUSA04762_00/LHc8qTz6JmLL46EdNWYEvqZEsIEYCbhy.png"
-              className=" h-56 w-full rounded-xl object-cover"
-            />
-            <h3 className="text-lg text-gray-300">Call of Duty</h3>
-            <p className="mb-2 text-gray-500">Action Fire</p>
-            <span className="flex justify-center  text-white">$250</span>
-          </div>
+          ))}
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-4 p-10 text-gray-500 md:flex-row md:justify-between md:pl-[340px]">
