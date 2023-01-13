@@ -26,6 +26,7 @@ import {
 import { useState } from "react";
 import CardSmall from "./components/CardSmall";
 import Card from "./components/Card";
+import Tab from "./components/Tab";
 
 function App() {
   const togleMenu = () => {
@@ -109,64 +110,48 @@ function App() {
           </h1>
           <ul>
             <li>
-              <Link
-                to={"/about"}
-                className="flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab url={"/"}>
                 <RiHome3Line /> Home
-              </Link>
+              </Tab>
             </li>
             <li>
-              <Link
-                to={"/about"}
-                className="flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab to="/">
                 <RiFirefoxLine /> Store
-              </Link>
+              </Tab>
             </li>
             <li>
-              <Link
-                to={"/about"}
-                className="flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab to="/">
+                {" "}
                 <RiLayoutGridLine /> Library
-              </Link>
+              </Tab>
             </li>
             <li>
-              <Link
-                to={"/about"}
-                className="flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab to="/">
+                {" "}
                 <RiUserLine /> Friends
-              </Link>
+              </Tab>
             </li>
             <li>
-              <Link
-                to={"/about"}
-                className="p3-4 flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab to="/">
+                {" "}
                 <RiWirelessChargingFill /> Live
-              </Link>
+              </Tab>
             </li>
           </ul>
         </div>
         <div>
           <ul>
             <li>
-              <Link
-                to={"/about"}
-                className="flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab to="/">
+                {" "}
                 <RiMailSendLine /> Download
-              </Link>
+              </Tab>
             </li>
             <li>
-              <Link
-                to={"/about"}
-                className="flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
-              >
+              <Tab to="/">
+                {" "}
                 <RiLinksFill /> Settings
-              </Link>
+              </Tab>
             </li>
             <li>
               <Link
@@ -174,7 +159,7 @@ function App() {
                 className="relative flex items-center gap-4 rounded-xl py-3 px-4 text-gray-300 transition-colors hover:bg-[#232323]"
               >
                 <img
-                  alt="image"
+                  alt="games"
                   className="h-6 w-6 rounded-full object-cover"
                   src="https://img.freepik.com/foto-gratis/primer-disparo-hombre-guapo-sonriendo_181624-41237.jpg?w=740&t=st=1671074933~exp=1671075533~hmac=cb6c6b35570a0d68c65aa7e9aee82b0e4dd6484ff70df5961ab0f3d8b1b0d256"
                 />
@@ -243,7 +228,7 @@ function App() {
             <img
               src="https://static-assets-prod.epicgames.com/competitive/static/webpack/1d89ee10c18f54afa33cf8063c27d7d4.jpg"
               className="h-96 w-full rounded-tl-xl rounded-bl-xl object-cover"
-              alt="image content"
+              alt="content"
             />
             <h1 className="absolute left-4 top-4 text-3xl font-bold text-white">
               Fornite
